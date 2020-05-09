@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "http://mybatis.org/dtd/mybatis-3-config.dtd" "mybatis-3-config.dtd" >
+<configuration>
+    <settings>
+        <!--全局sql打印控制台-->
+        <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <!--打印前缀-->
+        <setting name="logPrefix" value="cn.dqb.mapper"/>
+    </settings>
+</configuration>

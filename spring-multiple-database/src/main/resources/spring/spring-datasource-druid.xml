@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <!-- 数据源1 -->
+    <bean id="dataSource1" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"
+          destroy-method="close">
+        <property name="url" value="${jdbc_url1}"/>
+        <property name="username" value="${jdbc_username1}"/>
+        <property name="password" value="${jdbc_password1}"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="maxActive" value="20"/>
+        <property name="initialSize" value="1"/>
+        <property name="maxWait" value="60000"/>
+        <property name="minIdle" value="1"/>
+    </bean>
+
+    <!-- 数据源2 -->
+    <bean id="dataSource2" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"
+          destroy-method="close">
+        <property name="url" value="${jdbc_url2}"/>
+        <property name="username" value="${jdbc_username2}"/>
+        <property name="password" value="${jdbc_password2}"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="maxActive" value="20"/>
+        <property name="initialSize" value="1"/>
+        <property name="maxWait" value="60000"/>
+        <property name="minIdle" value="1"/>
+    </bean>
+
+    <!--统一的dataSource -->
+    <bean id="dynamicDataSource" class="cn.dqb.common.DynamicDataSource">
+        <property name="targetDataSources">
+            <map key-type="java.lang.String">
+                <!--通过不同的key决定用哪个dataSource -->
+                <entry value-ref="dataSource1" key="dataSource1"/>
+                <entry value-ref="dataSource2" key="dataSource2"/>
+            </map>
+        </property>
+        <!--设置默认的dataSource -->
+        <property name="defaultTargetDataSource" ref="dataSource1"/>
+    </bean>
+
+    <!-- mybatis文件配置，扫描所有mapper文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis_configuration.xml"/>
+        <property name="dataSource" ref="dynamicDataSource"/>
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!-- spring与mybatis整合配置，扫描所有dao ,生成与DAO类相同名字的bean（除了首字母小写） -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="cn.dqb.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dynamicDataSource"/>
+    </bean>
+</beans>

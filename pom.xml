@@ -5,13 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.baes</groupId>
-    <artifactId>spring-mvc-multi-module</artifactId>
+    <artifactId>spring-study</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>module-dao</module>
         <module>spring-aop</module>
-        <module>module-service</module>
-        <module>module-entity</module>
+        <module>spring-multiple-database</module>
     </modules>
     <packaging>pom</packaging>
 
