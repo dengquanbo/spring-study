@@ -4,12 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.baes</groupId>
+    <groupId>cn.dqb</groupId>
     <artifactId>spring-study</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-aop</module>
         <module>spring-multiple-database</module>
+        <module>spring-transaction</module>
+        <module>spring-quartz</module>
+        <module>spring-quartz-mamager</module>
     </modules>
     <packaging>pom</packaging>
 
