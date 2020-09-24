@@ -13,6 +13,9 @@
         <module>spring-transaction</module>
         <module>spring-quartz</module>
         <module>spring-quartz-mamager</module>
+        <module>spring-activemq</module>
+        <module>spring-event</module>
+        <module>spring-mybatis</module>
     </modules>
     <packaging>pom</packaging>
 

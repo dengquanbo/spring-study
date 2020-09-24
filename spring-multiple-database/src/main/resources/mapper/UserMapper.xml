@@ -5,7 +5,7 @@
         insert into user(username) value (#{username})
     </insert>
 
-    <select id="listUser" resultType="cn.dqb.entity.User">
+    <select id="listUser" resultType="User">
         SELECT * FROM `user`;
     </select>
 

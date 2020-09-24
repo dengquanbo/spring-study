@@ -11,11 +11,8 @@ import java.util.List;
 import cn.dqb.annotation.SwitchDB;
 import cn.dqb.common.DynamicDataSource;
 import cn.dqb.entity.Good;
-import cn.dqb.entity.User;
 import cn.dqb.mapper.IGoodMapper;
-import cn.dqb.mapper.IUserMapper;
 import cn.dqb.service.IGoodService;
-import cn.dqb.service.IUserService;
 
 /**
  * @author dqb

@@ -5,7 +5,7 @@
         insert into good(name) values (#{name})
     </insert>
 
-    <select id="listGood" resultType="cn.dqb.entity.Good">
+    <select id="listGood" resultType="Good">
         SELECT * FROM good;
     </select>
 

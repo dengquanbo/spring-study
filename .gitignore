@@ -178,3 +178,8 @@ module-web/module-web.iml
 module-dao/target
 module-dao/module-dao.iml
 /.idea/
+*.iml
+
+.mvn
+
+.iml

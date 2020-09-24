@@ -1,0 +1,10 @@
+@startuml
+DefaultMessageListenerContainer -> AbstractJmsListeningContainer: afterPropertiesSet
+AbstractJmsListeningContainer -> JmsAccessor: afterPropertiesSet
+JmsAccessor --> AbstractJmsListeningContainer
+AbstractJmsListeningContainer -> AbstractMessageListenerContainer: validateConfiguration
+AbstractMessageListenerContainer --> AbstractJmsListeningContainer
+AbstractJmsListeningContainer --> DefaultMessageListenerContainer:initialize
+DefaultMessageListenerContainer --> AbstractJmsListeningContainer
+
+@enduml

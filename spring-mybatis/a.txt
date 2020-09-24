@@ -1,0 +1,34 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< cn.dqb:spring-mybatis >------------------------
+[INFO] Building spring-mybatis 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ spring-mybatis ---
+[INFO] cn.dqb:spring-mybatis:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework:spring-test:jar:4.2.0.RELEASE:test
+[INFO] +- org.springframework:spring-core:jar:4.2.0.RELEASE:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] +- org.springframework:spring-tx:jar:4.2.0.RELEASE:compile
+[INFO] |  \- org.springframework:spring-beans:jar:4.2.0.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:4.2.0.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-aspects:jar:4.2.0.RELEASE:compile
+[INFO] |  \- org.aspectj:aspectjweaver:jar:1.8.6:compile
+[INFO] +- org.springframework:spring-context-support:jar:4.2.0.RELEASE:compile
+[INFO] |  \- org.springframework:spring-context:jar:4.2.0.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.2.0.RELEASE:compile
+[INFO] |  +- org.springframework:spring-expression:jar:4.2.0.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:4.2.0.RELEASE:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.26:compile
+[INFO] +- com.alibaba:druid:jar:1.1.10:compile
+[INFO] +- org.springframework:spring-jdbc:jar:4.2.0.RELEASE:compile
+[INFO] +- org.mybatis:mybatis:jar:3.2.7:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.2:compile
+[INFO] \- org.projectlombok:lombok:jar:1.16.18:provided
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.980 s
+[INFO] Finished at: 2020-09-01T20:45:30+08:00
+[INFO] ------------------------------------------------------------------------

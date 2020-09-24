@@ -10,7 +10,6 @@ import java.lang.reflect.Proxy;
  * @author dengquanbo
  */
 public class JDKInvocationHandler<T> implements InvocationHandler {
-
     /**
      * 目标对象
      */
@@ -38,11 +37,11 @@ public class JDKInvocationHandler<T> implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        long start = System.currentTimeMillis();
+      //  long start = System.currentTimeMillis();
         // 实际调用的方法，利用反射机制将请求分派给委托类处理
         Object result = method.invoke(target, args);
         // 记录时间
-        System.out.println(String.format("方法:%s,耗时:%s", method.getName(), System.currentTimeMillis() - start));
+      //  System.out.println(String.format("方法:%s,耗时:%s", method.getName(), System.currentTimeMillis() - start));
         return result;
     }
 }
