@@ -20,7 +20,7 @@
         <common.lang3.version>3.3</common.lang3.version>
         <c3p0.version>0.9.1.2</c3p0.version>
         <mysql.version>5.1.26</mysql.version>
-        <mybatis.version>3.2.7</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
         <mybatis.spring.version>1.2.3</mybatis.spring.version>
     </properties>
 
