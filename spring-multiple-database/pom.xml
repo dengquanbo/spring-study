@@ -15,7 +15,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>4.2.0.RELEASE</spring.version>
         <druid.version>1.1.10</druid.version>
-        <mysql.version>5.1.26</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <log4j.version>1.2.16</log4j.version>
         <common.lang3.version>3.3</common.lang3.version>
         <c3p0.version>0.9.1.2</c3p0.version>
